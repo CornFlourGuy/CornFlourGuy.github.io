@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +35,9 @@
             margin: 0 auto;
             padding: 0 15px;
         }
-        
+        html {
+    scroll-behavior: smooth;
+}
         /* Navigation */
         nav {
             background: linear-gradient(to right, var(--primary), var(--secondary));
@@ -325,6 +328,46 @@
     color: var(--secondary);
     font-size: 0.9rem;
 }
+/* Panchayat Description */
+.panchayat-description {
+    background-color: var(--card-bg);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+}
+
+.section-title {
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--secondary);
+}
+
+.description-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.description-content p {
+    font-size: 1.1rem;
+}
 /* Schools Section */
 .schools {
     background-color: var(--card-bg);
@@ -418,9 +461,9 @@ tr:hover {
             <a href="#" class="logo">Muliyar Grama Panchayat</a>
             <ul class="nav-links">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Images</a></li>
-                <li><a href="#">Wards</a></li>
+                <li><a href="#about-section" class="nav-link">About</a></li>
+                <li><a href="images.html">Images</a></li>
+                <li><a href="wards.html">Wards</a></li>
                 <li><a href="#">Members</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -434,7 +477,15 @@ tr:hover {
             <p>Serving the community with dedication in Kasaragod District, Kerala</p>
         </div>
     </section>
-    
+    <!-- Panchayat Description -->
+    <section id="about-section" class="panchayat-description">
+    <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="description-content">
+            <p>Muliyar Grama Panchayat, located in the picturesque Kasaragod district of Kerala, is a vibrant rural local body committed to sustainable development and community welfare. Established in 1959, our panchayat serves [number] wards with a population of over 22,000 residents. Blessed with lush greenery and rich cultural heritage, we focus on education, healthcare, infrastructure, and environmental conservation. Our administration actively implements state and central government schemes while preserving traditional values. Muliyar takes pride in its clean initiatives, agricultural projects, etc. Through participatory governance, we strive to create an empowered, self-reliant community while maintaining the unique ecological and cultural identity of our region.</p>
+        </div>
+    </div>
+</section>
     <!-- Main Content -->
     <div class="container">
         <div class="main-content">
@@ -712,18 +763,16 @@ tr:hover {
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
+                        <li><a href="#about-section">About Us</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Birth Certificate</a></li>
-                        <li><a href="#">Death Certificate</a></li>
-                        <li><a href="#">Property Tax</a></li>
-                        <li><a href="#">Building Permits</a></li>
+                        <li><a href="https://cr.lsgkerala.gov.in">Birth Certificate</a></li>
+                        <li><a href="https://tax.lsgkerala.gov.in/epayment/index.php">Property Tax</a></li>
+                        <li><a href="https://buildingpermit.lsgkerala.gov.in">Building Permits</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
